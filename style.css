@@ -4,7 +4,10 @@
 }
 
 .message {
-  font-size: 24px;
+  font-size: 100px;
+  width: 300vw;
+  hight: 300vh;
+  text-align: center;
 }
 
 .videoPlayer {
