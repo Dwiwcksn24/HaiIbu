@@ -1,12 +1,12 @@
 .container {
-  text-align: center;
-  padding: 50px;
+  position: absolute;
+  top:50%;
+  left:50%;
+transform: translate(-50% -50%);
 }
 
 .message {
-  font-size: 100px;
-  width: 300vw;
-  hight: 300vh;
+  font-size: 500px;
   text-align: center;
 }
 
