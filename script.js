@@ -21,7 +21,7 @@ function displayMessage() {
   if (index < messages.length) {
     messageElement.textContent = messages[index];
     index++;
-    setTimeout(displayMessage, 5000); // Change the time here (in milliseconds)
+    setTimeout(displayMessage, 3000); // Change the time here (in milliseconds)
   } else {
     showVideoPlayer();
   }
