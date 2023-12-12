@@ -1,11 +1,9 @@
 const messages = [
   "Hai Bu",
-  "Ibu..",
   "Matahari tidak selalu menampakkan cahayanya",
   "Tapi aku percaya",
   "Ibu akan selalu menampakkan dirimu",
   "Disaat aku membutuhkannya",
-  "Selamat Hari Ibu 2023",
   "Ibu Adalah Malaikatku",
   "Aku sayang ibu ❤️",
   // Add more messages here
