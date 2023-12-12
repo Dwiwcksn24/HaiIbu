@@ -10,8 +10,7 @@ const messages = [
   "Aku sayang ibu ❤️",
   // Add more messages here
 ];
-document.addEventListener('click', function() {
-bgMusic.paused ? bgMusic.play(click) : bgMusic.pause(click);
+
 const bgMusic = document.getElementById('bg-music');
 const messageElement = document.getElementById('message');
 const showVideoButton = document.getElementById('showVideo');
