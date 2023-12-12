@@ -3,33 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Selamat Hari Ibu</title>
-  <link rel="stylesheet" href="styles.css">
-<style type="text/css">
-  .videoPlayer
-  {
-    position: absolute;
-    width: 50%;
-    left: 50%;
-    top: 50%
-  }
-  .message {
-    position: absolute;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    text-size: 200px;
-    
-  }
-</style>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 100px;
+    }
+    #message {
+      display: none;
+    }
+    #video {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div id="message" class="message"></div>
-    <div id="videoPlayer" class="videoPlayer">
-      <iframe id="youtubePlayer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <div id="message"></div>
+  <div id="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hyf1nTcuang?si=5G6p4EoBaQFXRWU9" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const messages = [
+      "Hai Bu",
+      "Ibuu...",
+      "Matahari tidak selalu menampakkan cahayanya",
+      "Pada setiap sorotan hari",
+      "Tapi aku percaya..",
+      "Ibu selalu menampakkan dirinya saat aku membutuhkanya",
+      "Ibu Kaulah Malaikatku",
+      "Selamat Hari Ibu 2023 ",
+      "Terima Kasih Ibu",
+      "Aku Sayang Ibu ❤️",
+      // Add more sentences here
+    ];
+
+    const messageDiv = document.getElementById('message');
+    const videoDiv = document.getElementById('video');
+
+    let index = 0;
+
+    function showMessage() {
+      if (index < messages.length) {
+        messageDiv.innerText = messages[index];
+        messageDiv.style.display = 'block';
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+          index++;
+          showMessage();
+        }, 5000); // Show each message for 5 seconds
+      } else {
+        videoDiv.style.display = 'block';
+      }
+    }
+
+    showMessage();
+  </script>
 </body>
 </html>
