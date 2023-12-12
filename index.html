@@ -9,7 +9,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-size: 72px;
+      font-size: 40px;
       background-color: #FFC0CB;
     }
     #message {
@@ -31,14 +31,16 @@
     const messages = [
       "Hai Bu",
       "Ibuu...",
-      "Matahari tidak selalu menampakkan cahayanya",
+      "Matahari tidak selalu", 
+      "Menampakkan cahayanya",
       "Pada setiap sorotan hari",
       "Tapi aku percaya..",
-      "Ibu selalu menampakkan dirinya saat aku membutuhkanya",
+      "Ibu selalu menampakkan dirinya",
+      "Saat aku membutuhkanya",
       "Ibu Kaulah Malaikatku",
       "Selamat Hari Ibu 2023 ",
       "Terima Kasih Ibu",
-      "Aku Sayang Ibu ❤️",
+      "Aku Sayang Ibu ❤️"
       // Add more sentences here
     ];
 
@@ -55,7 +57,7 @@
           messageDiv.style.display = 'none';
           index++;
           showMessage();
-        }, 5000); // Show each message for 5 seconds
+        }, 3000); // Show each message for 5 seconds
       } else {
         videoDiv.style.display = 'block';
       }
