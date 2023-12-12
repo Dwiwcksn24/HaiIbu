@@ -10,7 +10,7 @@ const messages = [
   "Aku sayang ibu ❤️",
   // Add more messages here
 ];
-
+const bgMusic = document.getElementById('bg-music');
 const messageElement = document.getElementById('message');
 const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
