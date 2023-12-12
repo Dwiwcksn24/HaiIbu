@@ -12,6 +12,7 @@ const messages = [
 ];
 
 const messageElement = document.getElementById('message');
+const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 
@@ -22,8 +23,8 @@ function displayMessage() {
     messageElement.textContent = messages[index];
     index++;
     setTimeout(displayMessage, 3000); // Change the time here (in milliseconds)
-  } else {
-    showVideoPlayer();
+  } else showVideoButton.addEventListener('click', function() {{
+    showVideoPlayer= 'block';
   }
 }
 
