@@ -26,6 +26,38 @@ function displayMessage() {
     showVideoPlayer= 'block';
   }
 }
+// Function to check if an element is in the viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to play or pause the background music based on video player visibility
+function controlBackgroundMusic() {
+  var music = document.getElementById('backgroundMusic');
+  var videoPlayer = document.querySelector('.video-player');
+
+  if (isElementInViewport(videoPlayer)) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+
+// Event listener for scrolling to check visibility
+window.addEventListener('scroll', function() {
+  controlBackgroundMusic();
+});
+
+// Initial check when the page loads
+window.addEventListener('load', function() {
+  controlBackgroundMusic();
+});
 
 function showVideoPlayer() {
   messageElement.style.display = 'none';
