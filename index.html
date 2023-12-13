@@ -12,6 +12,7 @@
       font-size: 60px;
       background-color: #FFC0CB;
     }
+
     #message {
       display: none;
     }
@@ -20,16 +21,20 @@
     }
   </style>
 </head>
+  <audio id="bg-music"  autoplay loop>
+    <source src="Ibu.mp3" type="audio/mpeg">
+  </audio>
+</div>
 <body>
-  <div class="music-player">
-    <audio id="bg-music" src="Ibu.mp3" autoplay loop></audio>
-  </div>
+  
   <div id="message"></div>
+  
   <button id="showVideo" style="display: none;">Klik Aku</button>
   <div id="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Hyf1nTcuang?si=5G6p4EoBaQFXRWU9" frameborder="0" allowfullscreen></iframe>
   </div>
 
+  <script src="script.js"></script>
   <script>
     const messages = [
       "Hai Bu",
@@ -66,7 +71,10 @@
       }
     }
 
-    showMessage();
+
+  
+
+    // showMessage();
   </script>
 </body>
 </html>
