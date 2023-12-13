@@ -8,6 +8,15 @@ const messages = [
   "Aku sayang ibu ❤️",
   // Add more messages here
 ];
+.music-player {
+  text-align: left;
+  margin-top: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+}
 
 const bgMusic = document.getElementById('bg-music');
 const messageElement = document.getElementById('message');
