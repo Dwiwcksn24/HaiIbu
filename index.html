@@ -23,6 +23,7 @@
 <body>
   <div class="music-player">
     <audio id="bg-music" src="Ibu.mp3" autoplay loop></audio>
+    <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
   </div>
   <div id="message"></div>
   <button id="showVideo" style="display: none;">Klik Aku</button>
@@ -51,21 +52,6 @@
 
     let index = 0;
 
-    video.addEventListener('play', () => {
-      bg-music.pause();
-    });
-    video.addEventListener('pause', () => {
-      bg-music.play().catch(error => {
-        // Autoplay was prevented, you can handle this here
-        console.error('Autoplay was prevented: ', error);
-      });
-    });
-    video.addEventListener('ended', () => {
-      bg-music.play().catch(error => {
-        // Autoplay was prevented, you can handle this here
-        console.error('Autoplay was prevented: ', error);
-      });
-    });
 
     function showMessage() {
       if (index < messages.length) {
