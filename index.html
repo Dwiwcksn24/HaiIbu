@@ -13,6 +13,14 @@
       background-color: #FFC0CB;
     }
 
+
+    #music_player {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px;
+    }
+
     #message {
       display: none;
     }
@@ -21,14 +29,17 @@
     }
   </style>
 </head>
+<div id="music_player" style="display: flex; justify-content: left;" class="music-player">
   <audio id="bg-music"  autoplay loop>
     <source src="Ibu.mp3" type="audio/mpeg">
   </audio>
+  <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
 </div>
 <body>
   
   <div id="message"></div>
   
+ 
   <button id="showVideo" style="display: none;">Klik Aku</button>
   <div id="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Hyf1nTcuang?si=5G6p4EoBaQFXRWU9" frameborder="0" allowfullscreen></iframe>
