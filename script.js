@@ -8,14 +8,19 @@ const messages = [
   "Aku sayang ibu ❤️",
   // Add more messages here
 ];
-.music-player {
-  text-align: left;
-  margin-top: 50px;
+let music = document.getElementById('bgMusic');
+
+function togglePlayPause() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
 
-button {
-  padding: 10px 20px;
-  margin: 0 10px;
+function stopMusic() {
+  music.pause();
+  music.currentTime = 0;
 }
 
 const bgMusic = document.getElementById('bg-music');
