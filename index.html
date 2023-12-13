@@ -21,10 +21,13 @@
   </style>
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
-    <source src="Ibu.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="music-player">
+    <audio id="bgMusic" autoplay loop>
+      <source src="Ibu.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="togglePlayPause()">Play/Pause</button>
+    <button onclick="stopMusic()">Stop</button>
   <div id="message"></div>
   <button id="showVideo" style="display: none;">Klik Aku</button>
   <div id="video">
