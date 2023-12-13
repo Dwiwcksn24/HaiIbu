@@ -4,7 +4,17 @@
   left:50%;
 transform: translate (-50% -50%);
 }
+.music-player {
+  position: relative;
+  z-index: 1;
+}
 
+#playPause {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
 .message {
   font-size: 500px;
   position: absolute;
