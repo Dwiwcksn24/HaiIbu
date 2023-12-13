@@ -9,8 +9,7 @@ const messages = [
   // Add more messages here
 ];
 
-const music = document.getElementById('bg-music');
-const playPauseBtn = document.getElementById('play-pause-btn');
+const bgMusic = document.getElementById('bg-music');
 const messageElement = document.getElementById('message');
 const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
@@ -18,15 +17,6 @@ const youtubePlayer = document.getElementById('youtubePlayer');
 
 let index = 0;
 
-function togglePlayPause() {
-  if (music.paused || music.ended) {
-    music.play();
-    playPauseBtn.innerHTML = 'Pause';
-  } else {
-    music.pause();
-    playPauseBtn.innerHTML = 'Play';
-  }
-}
 function displayMessage() {
   if (index < messages.length) {
     messageElement.textContent = messages[index];
@@ -36,6 +26,7 @@ function displayMessage() {
     showVideoPlayer= 'block';
   }
 }
+
 
   function showVideoPlayer() {
   messageElement.style.display = 'none';
