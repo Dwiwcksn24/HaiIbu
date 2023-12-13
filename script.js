@@ -8,6 +8,15 @@ const messages = [
   "Aku sayang ibu ❤️",
   // Add more messages here
 ];
+
+const bgMusic = document.getElementById('bg-music');
+const messageElement = document.getElementById('message');
+const showVideoButton = document.getElementById('showVideo');
+const videoPlayer = document.getElementById('videoPlayer');
+const youtubePlayer = document.getElementById('youtubePlayer');
+
+let index = 0;
+
 let music = document.getElementById('bgMusic');
 
 function togglePlayPause() {
@@ -18,28 +27,14 @@ function togglePlayPause() {
   }
 }
 
-function stopMusic() {
-  music.pause();
-  music.currentTime = 0;
-}
-
-const bgMusic = document.getElementById('bg-music');
-const messageElement = document.getElementById('message');
-const showVideoButton = document.getElementById('showVideo');
-const videoPlayer = document.getElementById('videoPlayer');
-const youtubePlayer = document.getElementById('youtubePlayer');
-
-let index = 0;
-
 function displayMessage() {
   if (index < messages.length) {
     messageElement.textContent = messages[index];
     index++;
     setTimeout(displayMessage, 3000); // Change the time here (in milliseconds)
-  } else showVideoButton.addEventListener('click', function() {{
+  } else showVideoButton.addEventListener('click'), function() {
     showVideoPlayer= 'block';
   }
-}
 // Function to check if an element is in the viewport
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -82,3 +77,4 @@ function showVideoPlayer() {
 
 // Start displaying messages
 displayMessage();
+}

@@ -1,6 +1,7 @@
 .music-player {
   text-align: left;
-  margin-top: 50px;
+  margin-top: 50%;
+  margin-left: 100%;
 }
 
 button {
