@@ -26,14 +26,14 @@ function displayMessage() {
     showVideoPlayer= 'block';
   }
 }
-youtubePlayer.addEventListener('play', () => {
+videoPlayerPlayer.addEventListener('play', () => {
   bg-music.pause();
 });
-youtubePlayer.addEventListener('pause', () => {
+videoPlayer.addEventListener('pause', () => {
   bg-music.play();
 });
 
-youtubePlayer.addEventListener('ended', () => {
+videoPlayer.addEventListener('ended', () => {
   bg-music.play();
 });
 
