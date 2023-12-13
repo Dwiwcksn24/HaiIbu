@@ -26,14 +26,14 @@ function displayMessage() {
     showVideoPlayer= 'block';
   }
 }
-videoPlayerPlayer.addEventListener('play', () => {
+youtubePlayer.addEventListener('play', () => {
   bg-music.pause();
 });
-videoPlayer.addEventListener('pause', () => {
+youtubePlayer.addEventListener('pause', () => {
   bg-music.play();
 });
 
-videoPlayer.addEventListener('ended', () => {
+youtubePlayer.addEventListener('ended', () => {
   bg-music.play();
 });
 
@@ -43,13 +43,7 @@ videoPlayer.addEventListener('ended', () => {
   // Replace 'VIDEO_ID' with the YouTube video ID you want to play
   youtubePlayer.src = 'https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ';
 }
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-  }
+
 
 // Start displaying messages
 displayMessage();

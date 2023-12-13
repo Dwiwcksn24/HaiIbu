@@ -22,11 +22,7 @@
 </head>
 <body>
   <div class="music-player">
-    <iframe src="Ibu.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe> 
-    <audio autoplay loop  id="playAudio">
-      <source src="Ibu.mp3">
-  </audio>
+    <audio id="bg-music" src="Ibu.mp3" autoplay loop></audio>
   </div>
   <div id="message"></div>
   <button id="showVideo" style="display: none;">Klik Aku</button>
@@ -49,10 +45,27 @@
       // Add more sentences here
     ];
 
+    const bgMusic = document.getElementById('bg-music');
     const messageDiv = document.getElementById('message');
     const videoDiv = document.getElementById('video');
 
     let index = 0;
+
+    video.addEventListener('play', () => {
+      bg-music.pause();
+    });
+    video.addEventListener('pause', () => {
+      bg-music.play().catch(error => {
+        // Autoplay was prevented, you can handle this here
+        console.error('Autoplay was prevented: ', error);
+      });
+    });
+    video.addEventListener('ended', () => {
+      bg-music.play().catch(error => {
+        // Autoplay was prevented, you can handle this here
+        console.error('Autoplay was prevented: ', error);
+      });
+    });
 
     function showMessage() {
       if (index < messages.length) {
