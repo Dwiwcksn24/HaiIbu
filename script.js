@@ -9,23 +9,14 @@ const messages = [
   // Add more messages here
 ];
 
-const bgMusic = document.getElementById('bg-music');
+const music = document.getElementById('bg-music');
+const playPauseButton = document.getElementById('playPause');
 const messageElement = document.getElementById('message');
 const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 
 let index = 0;
-
-let music = document.getElementById('bgMusic');
-
-function togglePlayPause() {
-  if (music.paused) {
-    music.play();
-  } else {
-    music.pause();
-  }
-}
 
 function displayMessage() {
   if (index < messages.length) {
@@ -48,24 +39,17 @@ function isElementInViewport(el) {
 
 // Function to play or pause the background music based on video player visibility
 function controlBackgroundMusic() {
-  var music = document.getElementById('backgroundMusic');
   var videoPlayer = document.querySelector('.video-player');
 
-  if (isElementInViewport(videoPlayer)) {
+ 
+playPauseButton.addEventListener('click', function() {
+  if (music.paused) {
     music.play();
+    playPauseButton.textContent = 'Pause';
   } else {
     music.pause();
+    playPauseButton.textContent = 'Play';
   }
-}
-
-// Event listener for scrolling to check visibility
-window.addEventListener('scroll', function() {
-  controlBackgroundMusic();
-});
-
-// Initial check when the page loads
-window.addEventListener('load', function() {
-  controlBackgroundMusic();
 });
 
 function showVideoPlayer() {
@@ -77,4 +61,5 @@ function showVideoPlayer() {
 
 // Start displaying messages
 displayMessage();
+}
 }
