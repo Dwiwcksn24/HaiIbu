@@ -62,6 +62,12 @@ function showMessage() {
     music_hide.style.display = 'none';
   }
 }
+
+video.addEventListener('ended', function() {
+  video.style.display = 'none';
+  video2.style.display = 'block';
+  video2.play();
+});
   function showVideoPlayer() {
   messageElement.style.display = 'none';
   videoPlayer.style.display = 'click';
