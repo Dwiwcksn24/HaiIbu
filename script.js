@@ -72,4 +72,3 @@ function showMessage() {
 
 // Start displaying messages
 // displayMessage();
- 
