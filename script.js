@@ -57,22 +57,24 @@ function showMessage() {
       showMessage();
     }, 5000); // Show each message for 5 seconds
   } else {
-    video1.style.display = 'block';
+    video1.style.display = 'none';
     music.pause();
     music_hide.style.display = 'none';
   }
+}
+
+  function showVideoPlayer() {
+  messageElement.style.display = 'none';
+  video1Element.style.displa='block'
+  videoPlayer.style.display = 'click';
+  // Replace 'VIDEO_ID' with the YouTube video ID you want to play
+  youtubePlayer.src = 'https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ';
 }
 video1.addEventListener('ended', () => {
   video1.style.display = 'none';
   video2.style.display = 'block';
   video2.play();
 });
-  function showVideoPlayer() {
-  messageElement.style.display = 'none';
-  videoPlayer.style.display = 'click';
-  // Replace 'VIDEO_ID' with the YouTube video ID you want to play
-  youtubePlayer.src = 'https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ';
-}
 
 // showMessage();
 
