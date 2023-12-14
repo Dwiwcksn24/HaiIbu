@@ -20,7 +20,8 @@ const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 const messageDiv = document.getElementById('message');
-const videoDiv = document.getElementById('video');
+const video1 = document.getElementById('video1');
+const video2 = document.getElementById('video2');
 
 let index = 0;
 
@@ -56,11 +57,16 @@ function showMessage() {
       showMessage();
     }, 5000); // Show each message for 5 seconds
   } else {
-    videoDiv.style.display = 'block';
+    video1.style.display = 'block';
     music.pause();
     music_hide.style.display = 'none';
   }
 }
+video1.addEventListener('ended', () => {
+  video1.style.display = 'none';
+  video2.style.display = 'block';
+  video2.play();
+});
   function showVideoPlayer() {
   messageElement.style.display = 'none';
   videoPlayer.style.display = 'click';
