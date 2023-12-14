@@ -20,8 +20,7 @@ const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 const messageDiv = document.getElementById('message');
-const video = document.getElementById('video');
-const video2 = document.getElementById('video2');
+const videoDiv = document.getElementById('video');
 
 let index = 0;
 
@@ -62,12 +61,6 @@ function showMessage() {
     music_hide.style.display = 'none';
   }
 }
-
-video.addEventListener('ended', function() {
-  video.style.display = 'none';
-  video2.style.display = 'block';
-  video2.play();
-});
   function showVideoPlayer() {
   messageElement.style.display = 'none';
   videoPlayer.style.display = 'click';
