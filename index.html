@@ -41,13 +41,10 @@
   
  
   <button id="showVideo" style="display: none;">Klik Aku</button>
-  <div id="firstVideo" controls>
-    <source src="Vid1.mp4" type="video/mp4">
+  <div id="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hyf1nTcuang?si=5G6p4EoBaQFXRWU9" frameborder="0" allowfullscreen></iframe>
   </div>
-  <video id="secondVideo" style="display:none;" controls>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2zFTTBy5E94?si=QjLu27uHY7nGlHDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    Your browser does not support the video tag.
-  </video>
+
   <script src="script.js"></script>
   <script>
     const messages = [
@@ -66,8 +63,7 @@
 
     const bgMusic = document.getElementById('bg-music');
     const messageDiv = document.getElementById('message');
-    const firstVideo = document.getElementById('firstVideo');
-    const secondVideo = document.getElementById('secondVideo');
+    const videoDiv = document.getElementById('video');
 
     let index = 0;
 

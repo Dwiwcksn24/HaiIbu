@@ -20,8 +20,7 @@ const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 const messageDiv = document.getElementById('message');
-const firstVideo = document.getElementById('firstVideo');
-const secondVideo = document.getElementById('secondVideo');
+const videoDiv = document.getElementById('video');
 
 let index = 0;
 
@@ -66,16 +65,9 @@ function showMessage() {
   messageElement.style.display = 'none';
   videoPlayer.style.display = 'click';
   // Replace 'VIDEO_ID' with the YouTube video ID you want to play
-  youtubePlayer.src = "Vid1.mp4";
+  youtubePlayer.src = 'https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ';
 }
-firstVideo.addEventListener('ended', function() {
-  // Hide the first video and show the second video
-  firstVideo.style.display = 'none';
-  secondVideo.style.display = 'block';
 
-  // Play the second video
-  secondVideo.play();
-});
 // showMessage();
 
 // Start displaying messages
