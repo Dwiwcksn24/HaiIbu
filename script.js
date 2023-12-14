@@ -65,7 +65,7 @@ function showMessage() {
   messageElement.style.display = 'none';
   videoPlayer.style.display = 'click';
   // Replace 'VIDEO_ID' with the YouTube video ID you want to play
-  youtubePlayer.src = 'https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ';
+  youtubePlayer.src = 'https://www.youtube.com/embed/qHbDhFSEZC0?si=Q4UOt3u7_oZdrM9q';
 }
 
 // showMessage();
