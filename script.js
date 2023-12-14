@@ -20,7 +20,8 @@ const showVideoButton = document.getElementById('showVideo');
 const videoPlayer = document.getElementById('videoPlayer');
 const youtubePlayer = document.getElementById('youtubePlayer');
 const messageDiv = document.getElementById('message');
-const videoDiv = document.getElementById('video');
+const video = document.getElementById('video');
+const video2 = document.getElementById('video2');
 
 let index = 0;
 
