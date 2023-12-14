@@ -41,13 +41,13 @@
   
  
   <button id="showVideo" style="display: none;">Klik Aku</button>
-  <div class="video">
+  <div id="video">
     <video id="video" width="240" height="320" controls>
       <source src="Vid1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="video2">
+  <div id="video2">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Hyf1nTcuang?si=5G6p4EoBaQFXRWU9" frameborder="0" allowfullscreen></iframe>
   </div>
 
@@ -69,8 +69,8 @@
 
     const bgMusic = document.getElementById('bg-music');
     const messageDiv = document.getElementById('message');
-    const video = document.getElementById('video');
-    const video2 = document.getElementById('video2');
+    const videoDiv = document.getElementById('video');
+    const videoDiv = document.getElementById('video2');
 
 
     let index = 0;
@@ -92,7 +92,7 @@
 
 
   
-    video1.onended = function() {
+    video.onended = function() {
     video2.play();
   };
     // showMessage();
